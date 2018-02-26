@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      DOCKER_REMOTE_HOST: 51.15.195.44
+      DOCKER_REMOTE_HOST: b4c3c317-70d2-41bf-9c6b-28ac2d5326b0.pub.cloud.scaleway.com
       DEPLOY_USER: root
     volumes:
       - ./swarm.key:/swarm.key

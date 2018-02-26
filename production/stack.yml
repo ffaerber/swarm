@@ -34,25 +34,26 @@ services:
     networks:
       - frontend
     deploy:
+      replicas: 4
       labels:
-        traefik.frontend.rule: "Host:ed43bb24-15d5-4651-b3d9-536e20b3410c.pub.cloud.scaleway.com"
+        traefik.frontend.rule: "Host:b4c3c317-70d2-41bf-9c6b-28ac2d5326b0.pub.cloud.scaleway.com"
         traefik.port: "8000"
         traefik.docker.network: "myorg_production_frontend"
-      replicas: 4
+
 
   appsample:
-    image: ffaerber/appsample
+    image: ffaerber/appsample:v1.1.5
     networks:
       - frontend
       - backend
     environment:
       MONGO_HOST: mongodb://mongo-db/test
     deploy:
+      replicas: 3
       labels:
-        traefik.frontend.rule: "Host:ed43bb24-15d5-4651-b3d9-536e20b3410c.pub.cloud.scaleway.com;PathPrefixStrip:/appsample"
+        traefik.frontend.rule: "Host:b4c3c317-70d2-41bf-9c6b-28ac2d5326b0.pub.cloud.scaleway.com;PathPrefixStrip:/appsample"
         traefik.port: "3000"
         traefik.docker.network: "myorg_production_frontend"
-      replicas: 3
 
   mongo-db:
     networks:
