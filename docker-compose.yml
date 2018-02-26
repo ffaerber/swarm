@@ -1,0 +1,11 @@
+version: '2.0'
+
+services:
+  docker-client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DOCKER_REMOTE_HOST: 51.15.195.44
+      DEPLOY_USER: root
+      DEPLOY_KEY: ${DEPLOY_KEY}
