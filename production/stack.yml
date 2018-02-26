@@ -35,7 +35,7 @@ services:
       - frontend
     deploy:
       labels:
-        traefik.frontend.rule: "Host:4ac95ec0-0b28-4be0-8a7b-298fbbcb5998.pub.cloud.scaleway.com"
+        traefik.frontend.rule: "Host:ed43bb24-15d5-4651-b3d9-536e20b3410c.pub.cloud.scaleway.com"
         traefik.port: "8000"
         traefik.docker.network: "cumulocity_production_frontend"
       replicas: 4
@@ -49,7 +49,7 @@ services:
       MONGO_HOST: mongodb://mongo-db/test
     deploy:
       labels:
-        traefik.frontend.rule: "Host:4ac95ec0-0b28-4be0-8a7b-298fbbcb5998.pub.cloud.scaleway.com;PathPrefixStrip:/appsample"
+        traefik.frontend.rule: "Host:ed43bb24-15d5-4651-b3d9-536e20b3410c.pub.cloud.scaleway.com;PathPrefixStrip:/appsample"
         traefik.port: "3000"
         traefik.docker.network: "cumulocity_production_frontend"
       replicas: 30
