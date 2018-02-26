@@ -37,7 +37,7 @@ services:
       labels:
         traefik.frontend.rule: "Host:ed43bb24-15d5-4651-b3d9-536e20b3410c.pub.cloud.scaleway.com"
         traefik.port: "8000"
-        traefik.docker.network: "cumulocity_production_frontend"
+        traefik.docker.network: "myorg_production_frontend"
       replicas: 4
 
   appsample:
@@ -51,7 +51,7 @@ services:
       labels:
         traefik.frontend.rule: "Host:ed43bb24-15d5-4651-b3d9-536e20b3410c.pub.cloud.scaleway.com;PathPrefixStrip:/appsample"
         traefik.port: "3000"
-        traefik.docker.network: "cumulocity_production_frontend"
+        traefik.docker.network: "myorg_production_frontend"
       replicas: 30
 
   mongo-db:
