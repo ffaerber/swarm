@@ -15,4 +15,4 @@ RUN apk update && \
 RUN echo StrictHostKeyChecking no > /etc/ssh/ssh_config
 RUN chmod -R +x /scripts
 
-ENTRYPOINT ["make", "add_key", "start_proxy", "deploy_production"]
+ENTRYPOINT ["make", "start_proxy", "deploy_production"]
