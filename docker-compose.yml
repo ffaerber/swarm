@@ -9,4 +9,4 @@ services:
       DOCKER_REMOTE_HOST: 51.15.195.44
       DEPLOY_USER: root
     volumes:
-      - /swarm.key:/swarm.key
+      - ./swarm.key:/swarm.key
