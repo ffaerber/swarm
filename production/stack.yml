@@ -34,9 +34,9 @@ services:
     networks:
       - frontend
     deploy:
-      replicas: 4
+      replicas: 20
       labels:
-        traefik.frontend.rule: "Host:b4c3c317-70d2-41bf-9c6b-28ac2d5326b0.pub.cloud.scaleway.com"
+        traefik.frontend.rule: "Host:c591f781-f84c-4734-9910-4ef92662f736.pub.cloud.scaleway.com"
         traefik.port: "8000"
         traefik.docker.network: "myorg_production_frontend"
 
@@ -51,7 +51,7 @@ services:
     deploy:
       replicas: 3
       labels:
-        traefik.frontend.rule: "Host:b4c3c317-70d2-41bf-9c6b-28ac2d5326b0.pub.cloud.scaleway.com;PathPrefixStrip:/appsample"
+        traefik.frontend.rule: "Host:c591f781-f84c-4734-9910-4ef92662f736.pub.cloud.scaleway.com;PathPrefixStrip:/appsample"
         traefik.port: "3000"
         traefik.docker.network: "myorg_production_frontend"
 
